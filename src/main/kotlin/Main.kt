@@ -11,8 +11,8 @@ fun main(args: Array<String>) {
     val keySpec = RSAPublicKeySpec(
         BigInteger(rsaFormatterArgs.moduleHex, 16),
         BigInteger(rsaFormatterArgs.exponentHex, 16)
-    );
-    val key = KeyFactory.getInstance("RSA").generatePublic(keySpec);
+    )
+    val key = KeyFactory.getInstance("RSA").generatePublic(keySpec)
 
     println("-----BEGIN PUBLIC KEY-----")
     println(String((Base64.getEncoder().encode(key.encoded))))
